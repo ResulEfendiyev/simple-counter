@@ -1,0 +1,95 @@
+.Container {
+    display: flex;
+}
+
+.Text {
+    display: inline-block;
+}
+
+.textContainer {
+    width: 100px;
+    margin-right: 20px;
+    width: 60px;
+}
+
+.Zero {
+    background-color: #FFC119;
+    display: inline-block;
+    padding: 9px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    /* height: 40px;
+    width: 0px; */
+}
+
+.Positive {
+    background-color: #027BFD;
+    color: #fff;
+    display: inline-block;
+    padding: 9px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.Plus {
+    padding: 12px;
+    border: none;
+    background-color: #5A6268;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    transition: all .3s;
+}
+
+.Plus:focus {
+    outline: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.Minus:focus {
+    outline: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.Trash:focus {
+    outline: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Minus {
+    padding: 12px;
+    border: none;
+    background-color: #148496;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    transition: all .3s;
+}
+
+.Minus:disabled {
+    background-color: #76C3D1;
+    cursor: not-allowed;
+}
+
+.Trash {
+    padding: 12px;
+    border: none;
+    background-color: #C72233;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    transition: all .3s;
+}
+
