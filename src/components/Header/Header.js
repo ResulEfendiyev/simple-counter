@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./Header.module.css";
+import {StateContext} from '../../App'
 
-function Header(props) {
+function Header() {
+  const [items] = useContext(StateContext);
 
-  console.log(props)
   const [total, setTotal] = useState(0);
+  useEffect(() => {
+    let c = 0;
+    for(let i = 0; i < items.length; i++) {
+      if(items[i].value > 0) {
+        c++;
+      }
+    }
+
+    setTotal(c)
+  }, [items])
+  
   return (
     <div className={styles.Header}>
       <div className={styles.childContainer}>

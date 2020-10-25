@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Item from "../Item/Item";
 import styles from "./ItemList.module.css";
-
+import {StateContext} from '../../App'
 
 function ItemList() {
+  const [items, setItems] = useContext(StateContext);
   const initialState = [
     {
       id: 0,
@@ -22,27 +23,7 @@ function ItemList() {
       value: 0,
     },
   ];
- const [items, setItems] = useState([
-    {
-      id: 0,
-      value: 0,
-    },
-    {
-      id: 1,
-      value: 0,
-    },
-    {
-      id: 2,
-      value: 0,
-    },
-    {
-      id: 3,
-      value: 0,
-    },
-  ]);
-
-
-
+  
   const incrementHandler = (id) => {
     const index = items.findIndex((item) => item.id === id);
     const newItems = [...items];
